@@ -28,22 +28,29 @@ const FeaturedProducts = ({ type }) => {
       oldPrice: 19,
       price: 12
     },
-    {
       id: 4,
       img: 'https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600',
       title: 'Hat',
       isNew: true,
       oldPrice: 19,
       price: 12
-    }
   ];
 
   return (
     <div className='featuredProducts'>
       <div className='top'>
         <h1>{type} products</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas.
+        </p>
       </div>
-      <div className='bottom'></div>
+      <div className='bottom'>
+
+      </div>
     </div>
   );
 };
