@@ -1,3 +1,4 @@
+import { Card } from '@mui/material';
 import React from 'react';
 import './FeaturedProducts.scss';
 
@@ -28,12 +29,14 @@ const FeaturedProducts = ({ type }) => {
       oldPrice: 19,
       price: 12
     },
+    {
       id: 4,
       img: 'https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600',
       title: 'Hat',
       isNew: true,
       oldPrice: 19,
       price: 12
+    }
   ];
 
   return (
@@ -49,7 +52,9 @@ const FeaturedProducts = ({ type }) => {
         </p>
       </div>
       <div className='bottom'>
-
+        {data.map((item) => (
+          <Card item={item} />
+        ))}
       </div>
     </div>
   );
