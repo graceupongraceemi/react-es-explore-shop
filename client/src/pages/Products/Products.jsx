@@ -30,6 +30,14 @@ const Products = () => {
         </div>
         <div className='filterItem'>
           <h2>Sort by</h2>
+          <div className='inputItem'>
+            <input type='radio' id='asc' value='asc' name='price' />
+            <label htmlFor='asc'>Price (Lowest first)</label>
+          </div>
+          <div className='inputItem'>
+            <input type='radio' id='desc' value='desc' name='price' />
+            <label htmlFor='desc'>Price (Highest first)</label>
+          </div>
         </div>
       </div>
       <div className='right'></div>
