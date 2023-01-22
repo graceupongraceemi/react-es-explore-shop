@@ -62,5 +62,18 @@
         border: none;
       }
     }
+
+    .add {
+      width: 250px;
+      padding: 10px;
+      background-color: #2879fe;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      border: none;
+    }
   }
 }
