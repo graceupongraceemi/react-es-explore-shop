@@ -6,48 +6,12 @@ import './FeaturedProducts.scss';
 import axios from 'axios';
 
 const FeaturedProducts = ({ type }) => {
-  const data = [
-    {
-      id: 1,
-      img: 'https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      img2: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Long Sleeve Graphic T-shirt',
-      isNew: true,
-      oldPrice: 19,
-      price: 12
-    },
-    {
-      id: 2,
-      img: 'https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Coat',
-      isNew: true,
-      oldPrice: 19,
-      price: 12
-    },
-    {
-      id: 3,
-      img: 'https://images.pexels.com/photos/1007019/pexels-photo-1007019.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Skirt',
-      isNew: true,
-      oldPrice: 19,
-      price: 12
-    },
-    {
-      id: 4,
-      img: 'https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Hat',
-      isNew: true,
-      oldPrice: 19,
-      price: 12
-    }
-  ];
-
-  const [products, setProducts] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await axios.get(
+        const res = await axios.get(
           process.env.REACT_APP_API_URL + '/products',
           {
             headers: {
@@ -56,7 +20,7 @@ const FeaturedProducts = ({ type }) => {
           }
         );
 
-        console.log(data);
+        setData(res.data.data);
       } catch (err) {
         console.log(err);
       }
