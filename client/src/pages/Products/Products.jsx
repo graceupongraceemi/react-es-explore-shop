@@ -16,8 +16,16 @@ const Products = () => {
 
   const handleChange = (e) => {
     const value = e.target.value;
-    const checked = e.target.checked;
+    const isChecked = e.target.checked;
+
+    setSelectedSubCats(
+      isChecked
+        ? [...selectedSubCats, value]
+        : selectedSubCats.filter((item) => item !== value)
+    );
   };
+
+  // console.log(selectedSubCats);
 
   return (
     <div className='products'>
@@ -83,7 +91,7 @@ const Products = () => {
           catId={catId}
           maxPrice={maxPrice}
           sort={sort}
-          // subCats={selectedSubCats}
+          subCats={selectedSubCats}
         />
       </div>
     </div>
